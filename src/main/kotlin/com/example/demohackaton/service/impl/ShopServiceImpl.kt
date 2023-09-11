@@ -43,7 +43,7 @@ class ShopServiceImpl @Autowired internal constructor(
     }
   }
 
-  override fun getShopById(id: Long, q: String): ShopDto {
+  override fun getShopById(id: Long): ShopDto {
     val shop = shopRepository.findById(id).orElseThrow {
       Exception("shop id $id not found!!!")
     }

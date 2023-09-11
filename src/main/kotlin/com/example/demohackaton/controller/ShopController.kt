@@ -37,14 +37,13 @@ class ShopController @Autowired internal constructor(
   @GetMapping("/{id}")
   fun getShopById(
     @PathVariable id: Long,
-    @RequestParam("q", required = false) q: String
   ): ResponseEntity<Any> {
     return try {
       ResponseEntity.ok(
         HttpResponse(
           true,
           "Get Shop By Id Success",
-          shopService.getShopById(id, q),
+          shopService.getShopById(id),
         )
       )
     } catch (e: Exception) {

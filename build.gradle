@@ -25,7 +25,7 @@ plugins {
 }
 
 group = 'com.example'
-sourceCompatibility = '19'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -71,7 +71,7 @@ dependencies {
 compileKotlin {
     kotlinOptions {
         freeCompilerArgs = ['-Xjsr305=strict']
-        jvmTarget = "19"
+        jvmTarget = "17"
     }
 }
 
